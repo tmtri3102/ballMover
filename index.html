@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<form style="display: grid; place-items: center">
+			<div style="display: flex; padding: 16px; gap: 16px">
+				<button
+					style="font-size: 20px"
+					onclick="moveDown()"
+				>
+					Down 👇
+				</button>
+				<button
+					style="font-size: 20px"
+					onclick="moveRight()"
+				>
+					Right 👉
+				</button>
+				<button
+					style="font-size: 20px"
+					onclick="moveLeft()"
+				>
+					Left 👈
+				</button>
+				<button
+					style="font-size: 20px"
+					onclick="moveUp()"
+				>
+					Up 👆
+				</button>
+			</div>
+
+			<div
+				style="
+					width: 400px;
+					height: 400px;
+					border: 2px solid black;
+					position: relative;
+				"
+				id="frame"
+			>
+				<img
+					id="ball"
+					src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg"
+					style="width: 50px; position: absolute"
+				/>
+			</div>
+		</form>
+		<script src="main.js"></script>
+	</body>
+</html>
