@@ -1,8 +1,5 @@
 let ball = null;
 let frame = document.getElementById("frame");
-// let maxLeft = frame.offsetWidth - ball.offsetWidth;
-// let maxTop = frame.offsetHeight - ball.offsetHeight;
-// ball = document.getElementById("ball");
 
 function init() {
 	ball = document.getElementById("ball");
@@ -47,3 +44,37 @@ function moveLeft() {
 	}
 }
 window.onload = init;
+window.addEventListener("keydown", (e) => {
+	const actions = {
+		ArrowLeft: moveLeft,
+		ArrowRight: moveRight,
+		ArrowUp: moveUp,
+		ArrowDown: moveDown,
+	};
+
+	if (actions[e.key]) {
+		e.preventDefault();
+		actions[e.key]();
+	}
+});
+// window.addEventListener("keydown", (e) => {
+// 	if (e.key === "ArrowLeft") {
+// 		e.preventDefault();
+// 		moveLeft();
+// 	}
+// 	if (e.key === "ArrowRight") {
+// 		e.preventDefault();
+// 		moveRight();
+// 	}
+// 	if (e.key === "ArrowUp") {
+// 		e.preventDefault();
+// 		moveUp();
+// 	}
+// 	if (e.key === "ArrowDown") {
+// 		e.preventDefault();
+// 		moveDown();
+// 	}
+// });
+// if (e.key.startsWith("Arrow")) {
+// 	console.log(`${e.key}`);
+// }
